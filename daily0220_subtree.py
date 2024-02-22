@@ -2,10 +2,10 @@
 
 def subtree(node):
     global cnt
-    if node != 0:
-        cnt += 1
-        subtree(left[node])
-        subtree(right[node])
+    if node: # node가 0이 아니라면
+        cnt += 1 # 카운트 증가
+        subtree(left[node]) # 왼쪽 탐색
+        subtree(right[node]) # 오른쪽 탐색
     return cnt
  
 T = int(input())
