@@ -1,12 +1,30 @@
+# [BAEKJOON] 4949. 균형 잡힌 세상
 
-K = int(input())
-stack = []
+while True:
+  string = input()
+  result = 'yes'
+  stack = []
+  if string == '.':
+    break
+  for s in string:
+    if s in '[(':
+      stack.append(s)
+    elif s in '])':
+      if stack:
+        s2 = stack.pop()
+        if s == ']' and s2 != '[':
+          result = 'no'
+          break
+        elif s == ')' and s2 != '(':
+          result = 'no'
+          break
+        else:
+          result = 'no'
+          break
+    elif s == '.':
+      break
 
-for i in range(K):
-  num = int(input())
-  if num == 0:
-    stack.pop()
+  if stack:
+    print('no')
   else:
-    stack.append(num)
-
-print(sum(stack))
+    print(result)
