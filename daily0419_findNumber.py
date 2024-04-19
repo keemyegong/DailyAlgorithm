@@ -1,3 +1,6 @@
+# [BAEKJOON] 1920. 수 찾기
+# 이분탐색 이용 풀이
+
 import sys
 input = sys.stdin.readline
 
