@@ -1,0 +1,12 @@
+# [BAEKJOON] 2750. 수 정렬하기
+
+N = int(input())
+nums = [0] * N
+
+for i in range(N):
+    nums[i] = int(input())
+
+nums.sort()
+
+for num in nums:
+    print(num)
